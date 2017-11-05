@@ -1,0 +1,15 @@
+[submodule "lib/Blue-Base-Core"]
+	path = lib/Blue-Base-Core
+	url = https://github.com/BlueHuskyStudios/Blue-Base.git
+[submodule "lib/Blue-Base-JVM"]
+	path = lib/Blue-Base-JVM
+	url = https://github.com/BlueHuskyStudios/Blue-Base-JVM.git
+[submodule "lib/Husky-UI-JVM"]
+	path = lib/Husky-UI-JVM
+	url = https://github.com/BlueHuskyStudios/Husky-UI-JVM.git
+[submodule "lib/LatteFX"]
+	path = lib/LatteFX
+	url = https://github.com/BenLeggiero/LatteFX.git
+[submodule "lib/Husky-UI-Core"]
+	path = lib/Husky-UI-Core
+	url = https://github.com/BlueHuskyStudios/Husky-UI.git
