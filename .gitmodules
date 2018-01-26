@@ -13,3 +13,6 @@
 [submodule "lib/Husky-UI-Core"]
 	path = lib/Husky-UI-Core
 	url = https://github.com/BlueHuskyStudios/Husky-UI.git
+[submodule "lib/Text-Game-Engine"]
+	path = lib/Text-Game-Engine
+	url = https://github.com/BenLeggiero/Text-Game-Engine.git
