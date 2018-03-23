@@ -1,9 +1,8 @@
 package org.bh.app.textGameTests
 
-import LatteFX.LatteFXMain
-import LatteFX.contentWrapper
+import LatteFX.*
 
 class Main : LatteFXMain({ commandLineArguments, primaryWindow ->
-      primaryWindow!!.contentWrapper = TGTContentWrapper()
-      primaryWindow.show()
+    primaryWindow!!.contentWrapper = TGTContentWrapper()
+    primaryWindow.show()
 })

@@ -1,0 +1,9 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PackageDirectoryMismatch" enabled="true" level="INFORMATION" enabled_by_default="true" />
+    <inspection_tool class="PackageName" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="namePattern" value="^(([a-z][A-Za-z\d]*(\.[a-z][A-Za-z\d]*){1,6})|([A-Z][A-Za-z\d]+(\.[A-Z][A-Za-z\d]*){0,3}))$" />
+    </inspection_tool>
+  </profile>
+</component>

@@ -1,0 +1,8 @@
+
+.tgt .text-input {
+    -fx-text-fill: #00C853;
+    -fx-background-color: #212121 !important;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-font-family: monospace;
+}

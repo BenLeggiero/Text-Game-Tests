@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/lib/Husky-UI-Core/JVM/Husky UI Core.iml" filepath="$PROJECT_DIR$/lib/Husky-UI-Core/JVM/Husky UI Core.iml" group="Libraries" />
       <module fileurl="file://$PROJECT_DIR$/lib/Husky-UI-JVM/Husky UI JVM/Husky UI JVM.iml" filepath="$PROJECT_DIR$/lib/Husky-UI-JVM/Husky UI JVM/Husky UI JVM.iml" group="Libraries" />
       <module fileurl="file://$PROJECT_DIR$/lib/LatteFX/LatteFX.iml" filepath="$PROJECT_DIR$/lib/LatteFX/LatteFX.iml" group="Libraries" />
+      <module fileurl="file://$PROJECT_DIR$/lib/Text-Game-Engine/JVM/Text Game Engine JVM.iml" filepath="$PROJECT_DIR$/lib/Text-Game-Engine/JVM/Text Game Engine JVM.iml" group="Libraries" />
       <module fileurl="file://$PROJECT_DIR$/Text-Game-Tests.iml" filepath="$PROJECT_DIR$/Text-Game-Tests.iml" group="App" />
     </modules>
   </component>

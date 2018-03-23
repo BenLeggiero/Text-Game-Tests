@@ -7,5 +7,6 @@
     <mapping directory="$PROJECT_DIR$/lib/Husky-UI-Core" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/lib/Husky-UI-JVM" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/lib/LatteFX" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/Text-Game-Engine" vcs="Git" />
   </component>
 </project>
