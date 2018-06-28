@@ -16,3 +16,6 @@
 [submodule "lib/Text-Game-Engine"]
 	path = lib/Text-Game-Engine
 	url = https://github.com/BenLeggiero/Text-Game-Engine.git
+[submodule "lib/Husky-IO-Core"]
+	path = lib/Husky-IO-Core
+	url = https://github.com/BlueHuskyStudios/Husky-IO.git
