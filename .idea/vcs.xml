@@ -2,10 +2,14 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../My-Talk-Radio/lib/Husky-IO" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../My-Talk-Radio/lib/Husky-IO/JVM/lib/gson" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/lib/Blue-Base-Core" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/lib/Blue-Base-JVM" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/lib/Husky-UI-Core" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/lib/Husky-UI-JVM" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/Husky-IO-Core" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/Husky-UI-Core.old" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/Husky-UI-JVM.old" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/lib/LatteFX" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/lib/Text-Game-Engine" vcs="Git" />
   </component>

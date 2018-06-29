@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id="Husky-UI-Core:test" external.linked.project.path="$MODULE_DIR$/../../lib/Husky-UI-Core" external.root.project.path="$MODULE_DIR$/../../lib/Husky-UI-Core" external.system.id="GRADLE" external.system.module.group="org.bh" external.system.module.type="sourceSet" external.system.module.version="2.0.0-lambda.1" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="kotlin-language" name="Kotlin">
+      <configuration version="3" platform="Common (experimental) " useProjectSettings="false">
+        <compilerSettings />
+        <compilerArguments>
+          <option name="destination" value="$MODULE_DIR$/../../lib/Husky-UI-Core/build/classes/kotlin/test" />
+          <option name="classpath" value="$MODULE_DIR$/../../lib/Husky-UI-Core/build/classes/java/main:/Users/ben/Google Drive/Libraries/Projects/From Me/Text-Game-Tests/lib/Husky-UI-Core/build/classes/kotlin/main:/Users/ben/Google Drive/Libraries/Projects/From Me/Text-Game-Tests/lib/Husky-UI-Core/build/resources/main:/Users/ben/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-test-annotations-common/1.2.60-eap-7/ae31795fb747d61aa57b5558d3a22ea96296504e/kotlin-test-annotations-common-1.2.60-eap-7.jar:/Users/ben/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-test-common/1.2.60-eap-7/3ca6ea99cd434cdcada3eddf0be8cdc4c5e18c6c/kotlin-test-common-1.2.60-eap-7.jar:/Users/ben/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.2.60-eap-7/2424258903acdc6bc210ef1f4e23b74018ac529e/kotlin-stdlib-common-1.2.60-eap-7.jar:/Users/ben/Google Drive/Libraries/Projects/From Me/Text-Game-Tests/lib/Husky-UI-Core/build/classes/kotlin/main" />
+          <option name="moduleName" value="Husky-UI-Core" />
+          <option name="languageVersion" value="1.2" />
+          <option name="apiVersion" value="1.2" />
+          <option name="pluginOptions">
+            <array />
+          </option>
+          <option name="pluginClasspaths">
+            <array />
+          </option>
+          <option name="multiPlatform" value="true" />
+        </compilerArguments>
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_9">
+    <output-test url="file://$MODULE_DIR$/../../lib/Husky-UI-Core/out/test/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../lib/Husky-UI-Core/src/test">
+      <sourceFolder url="file://$MODULE_DIR$/../../lib/Husky-UI-Core/src/test/kotlin" type="kotlin-test" />
+      <sourceFolder url="file://$MODULE_DIR$/../../lib/Husky-UI-Core/src/test/resources" type="kotlin-test-resource" />
+    </content>
+    <orderEntry type="jdk" jdkName="Kotlin SDK" jdkType="KotlinSDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="Husky UI Core (main)" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-test-annotations-common:1.2.60-eap-7" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-test-common:1.2.60-eap-7" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.2.60-eap-7" level="project" />
+  </component>
+  <component name="TestModuleProperties" production-module="Husky UI Core (main)" />
+</module>
