@@ -21,7 +21,13 @@ class TGTMainView : BorderPane() {
 //        textInputField.maxHeight = textInputField.font.size * 3
 //        this.bottom = textInputField
 
-        buttonInputArea = ButtonInputArea()
+        buttonInputArea = ButtonInputArea(ButtonInputAreaModel(columnCount = 5,
+                                                               rowCount = 3,
+                                                               buttonModelGenerator = { columnIndex, rowIndex ->
+            ButtonInputModel("$columnIndex $rowIndex") {
+                print("pressed")
+            }
+        }))
         this.bottom = buttonInputArea
 
         textOutputArea = TextArea("Hello, FX!")

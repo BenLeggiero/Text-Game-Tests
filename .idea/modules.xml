@@ -4,8 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/lib/Blue-Base-Core/Blue Base Core.iml" filepath="$PROJECT_DIR$/lib/Blue-Base-Core/Blue Base Core.iml" group="Libraries" />
       <module fileurl="file://$PROJECT_DIR$/lib/Blue-Base-JVM/Blue Base/Blue Base JVM.iml" filepath="$PROJECT_DIR$/lib/Blue-Base-JVM/Blue Base/Blue Base JVM.iml" group="Libraries" />
+      <module fileurl="file://$PROJECT_DIR$/../My-Talk-Radio/lib/Husky-IO/JVM/Husky IO Core.iml" filepath="$PROJECT_DIR$/../My-Talk-Radio/lib/Husky-IO/JVM/Husky IO Core.iml" group="Libraries" />
       <module fileurl="file://$PROJECT_DIR$/lib/Husky-UI-Core/Husky UI Core.iml" filepath="$PROJECT_DIR$/lib/Husky-UI-Core/Husky UI Core.iml" group="Libraries" />
-      <module fileurl="file://$PROJECT_DIR$/lib/Husky-UI-Core/JVM/Husky UI Core.iml" filepath="$PROJECT_DIR$/lib/Husky-UI-Core/JVM/Husky UI Core.iml" group="Libraries" />
       <module fileurl="file://$PROJECT_DIR$/lib/Husky-UI-JVM/Husky UI JVM/Husky UI JVM.iml" filepath="$PROJECT_DIR$/lib/Husky-UI-JVM/Husky UI JVM/Husky UI JVM.iml" group="Libraries" />
       <module fileurl="file://$PROJECT_DIR$/lib/LatteFX/LatteFX.iml" filepath="$PROJECT_DIR$/lib/LatteFX/LatteFX.iml" group="Libraries" />
       <module fileurl="file://$PROJECT_DIR$/lib/Text-Game-Engine/JVM/Text Game Engine JVM.iml" filepath="$PROJECT_DIR$/lib/Text-Game-Engine/JVM/Text Game Engine JVM.iml" group="Libraries" />
