@@ -28,10 +28,12 @@
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output-test url="file://$MODULE_DIR$/../../lib/Husky-UI-JVM/out/test/classes" />
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../../lib/Husky-UI-JVM/src/test" />
+    <content url="file://$MODULE_DIR$/../../lib/Husky-UI-JVM/src/test">
+      <sourceFolder url="file://$MODULE_DIR$/../../lib/Husky-UI-JVM/src/test/kotlin" isTestSource="true" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="Husky UI JVM (main)" />
+    <orderEntry type="module" module-name="Husky-UI-JVM_main" />
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.2.60-eap-7" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-test-junit:1.2.60-eap-7" level="project" />
     <orderEntry type="library" name="Gradle: junit:junit:4.12" level="project" />
@@ -44,5 +46,5 @@
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.2.60-eap-7" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains:annotations:13.0" level="project" />
   </component>
-  <component name="TestModuleProperties" production-module="Husky UI JVM (main)" />
+  <component name="TestModuleProperties" production-module="Husky-UI-JVM_main" />
 </module>

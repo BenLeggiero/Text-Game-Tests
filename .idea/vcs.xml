@@ -8,8 +8,8 @@
     <mapping directory="$PROJECT_DIR$/lib/Blue-Base-Core" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/lib/Blue-Base-JVM" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/lib/Husky-IO-Core" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/lib/Husky-UI-Core.old" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/lib/Husky-UI-JVM.old" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/Husky-UI-Core" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/Husky-UI-JVM" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/lib/LatteFX" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/lib/Text-Game-Engine" vcs="Git" />
   </component>

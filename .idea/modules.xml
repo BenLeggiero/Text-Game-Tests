@@ -5,15 +5,15 @@
       <module fileurl="file://$PROJECT_DIR$/lib/Blue-Base-Core/Blue Base Core.iml" filepath="$PROJECT_DIR$/lib/Blue-Base-Core/Blue Base Core.iml" group="Libraries" />
       <module fileurl="file://$PROJECT_DIR$/lib/Blue-Base-JVM/Blue Base/Blue Base JVM.iml" filepath="$PROJECT_DIR$/lib/Blue-Base-JVM/Blue Base/Blue Base JVM.iml" group="Libraries" />
       <module fileurl="file://$PROJECT_DIR$/../My-Talk-Radio/lib/Husky-IO/JVM/Husky IO Core.iml" filepath="$PROJECT_DIR$/../My-Talk-Radio/lib/Husky-IO/JVM/Husky IO Core.iml" group="Libraries" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Husky UI Core (main).iml" filepath="$PROJECT_DIR$/.idea/modules/Husky UI Core (main).iml" group="Libraries" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Husky UI JVM (main).iml" filepath="$PROJECT_DIR$/.idea/modules/Husky UI JVM (main).iml" group="Libraries" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Husky-UI-Core.iml" filepath="$PROJECT_DIR$/.idea/modules/Husky-UI-Core.iml" group="Build Assistants" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Husky-UI-Core_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Husky-UI-Core_test.iml" group="Tests" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Husky-UI-JVM.iml" filepath="$PROJECT_DIR$/.idea/modules/Husky-UI-JVM.iml" group="Build Assistants" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Husky-UI-JVM_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Husky-UI-JVM_test.iml" group="Tests" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Husky-UI-Core.iml" filepath="$PROJECT_DIR$/.idea/modules/Husky-UI-Core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Husky-UI-Core_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Husky-UI-Core_main.iml" group="Husky-UI-Core" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Husky-UI-Core_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Husky-UI-Core_test.iml" group="Husky-UI-Core" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Husky-UI-JVM.iml" filepath="$PROJECT_DIR$/.idea/modules/Husky-UI-JVM.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Husky-UI-JVM_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Husky-UI-JVM_main.iml" group="Husky-UI-JVM" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Husky-UI-JVM_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Husky-UI-JVM_test.iml" group="Husky-UI-JVM" />
       <module fileurl="file://$PROJECT_DIR$/lib/LatteFX/LatteFX.iml" filepath="$PROJECT_DIR$/lib/LatteFX/LatteFX.iml" group="Libraries" />
       <module fileurl="file://$PROJECT_DIR$/lib/Text-Game-Engine/JVM/Text Game Engine JVM.iml" filepath="$PROJECT_DIR$/lib/Text-Game-Engine/JVM/Text Game Engine JVM.iml" group="Libraries" />
-      <module fileurl="file://$PROJECT_DIR$/Text-Game-Tests.iml" filepath="$PROJECT_DIR$/Text-Game-Tests.iml" group="App" />
+      <module fileurl="file://$PROJECT_DIR$/Text Game Tests.iml" filepath="$PROJECT_DIR$/Text Game Tests.iml" group="App" />
     </modules>
   </component>
 </project>

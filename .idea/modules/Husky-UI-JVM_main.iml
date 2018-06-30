@@ -28,7 +28,9 @@
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output url="file://$MODULE_DIR$/../../lib/Husky-UI-JVM/out/production/classes" />
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../../lib/Husky-UI-JVM/src/main" />
+    <content url="file://$MODULE_DIR$/../../lib/Husky-UI-JVM/src/main">
+      <sourceFolder url="file://$MODULE_DIR$/../../lib/Husky-UI-JVM/src/main/kotlin" isTestSource="false" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.2.60-eap-7" level="project" />

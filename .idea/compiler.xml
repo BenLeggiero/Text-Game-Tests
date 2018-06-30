@@ -3,9 +3,17 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
       <module name="Husky UI Core (main)" target="1.9" />
+      <module name="Husky UI Core (test)" target="1.9" />
       <module name="Husky UI JVM (main)" target="1.8" />
+      <module name="Husky UI JVM (test)" target="1.8" />
+      <module name="Husky-UI-Core_main" target="1.9" />
       <module name="Husky-UI-Core_test" target="1.9" />
+      <module name="Husky-UI-JVM_main" target="1.8" />
       <module name="Husky-UI-JVM_test" target="1.8" />
+      <module name="Husky_UI_Core_main" target="1.9" />
+      <module name="Husky_UI_Core_test" target="1.9" />
+      <module name="Husky_UI_JVM_main" target="1.8" />
+      <module name="Husky_UI_JVM_test" target="1.8" />
       <module name="org.bh.Husky-UI-JVM.main" target="1.8" />
       <module name="org.bh.Husky-UI-JVM.test" target="1.8" />
     </bytecodeTargetLevel>

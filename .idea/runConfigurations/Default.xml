@@ -1,7 +1,7 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Default" type="Application" factoryName="Application" singleton="true">
     <option name="MAIN_CLASS_NAME" value="org.bh.app.textGameTests.Main" />
-    <module name="Text-Game-Tests" />
+    <module name="Text Game Tests" />
     <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
     <method />
   </configuration>
