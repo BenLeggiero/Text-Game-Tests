@@ -9,7 +9,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
-    <orderEntry type="module" module-name="Blue Base Core" />
+    <orderEntry type="module" module-name="Blue-Base-Core" />
     <orderEntry type="module" module-name="Blue Base JVM" />
     <orderEntry type="module" module-name="Husky IO Core" />
     <orderEntry type="module" module-name="Husky-UI-Core_main" />

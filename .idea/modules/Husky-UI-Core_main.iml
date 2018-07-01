@@ -25,8 +25,8 @@
     <output url="file://$MODULE_DIR$/../../lib/Husky-UI-Core/out/production/classes" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../lib/Husky-UI-Core/src/main">
-      <sourceFolder url="file://$MODULE_DIR$/../../lib/Husky-UI-Core/src/main/kotlin" type="kotlin-source" />
-      <sourceFolder url="file://$MODULE_DIR$/../../lib/Husky-UI-Core/src/main/resources" type="kotlin-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../lib/Husky-UI-Core/src/main/kotlin" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../lib/Husky-UI-Core/src/main/resources" type="java-resource" />
     </content>
     <orderEntry type="jdk" jdkName="Kotlin SDK" jdkType="KotlinSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
