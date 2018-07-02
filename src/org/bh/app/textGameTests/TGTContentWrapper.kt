@@ -4,6 +4,7 @@ import LatteFX.*
 import javafx.scene.control.TextArea
 import javafx.scene.layout.BorderPane
 import org.bh.app.textGameTests.ui.*
+import org.bh.tools.textGame.interaction.InteractionFilter.*
 
 class TGTContentWrapper : LatteWindowContentView(TGTMainView()) {
 }
@@ -12,7 +13,7 @@ class TGTMainView : BorderPane() {
 
     val textOutputArea: TextArea
 //    val textInputField: TextField
-    val buttonInputArea: ButtonInputArea
+    val gridButtonInputArea: GridButtonInputArea
 
     init {
         this.styleClass.add("tgt")
@@ -21,14 +22,18 @@ class TGTMainView : BorderPane() {
 //        textInputField.maxHeight = textInputField.font.size * 3
 //        this.bottom = textInputField
 
-        buttonInputArea = ButtonInputArea(ButtonInputAreaModel(columnCount = 5,
-                                                               rowCount = 3,
-                                                               buttonModelGenerator = { columnIndex, rowIndex ->
-            ButtonInputModel("$columnIndex $rowIndex") {
-                print("pressed")
-            }
+        gridButtonInputArea = GridButtonInputArea(GridButtonInputAreaModel(columnCount = 5,
+                                                                           rowCount = 3,
+                                                                           buttonModelGenerator = { columnIndex, rowIndex ->
+            GridButtonInputModel(column = columnIndex,
+                                 row = rowIndex,
+                                 titleText = "Hey there",
+                                 interactionFilter = visibleToCharacter,
+                                 didPress = {
+                print("pressed (${it.clickedColumn}, ${it.clickedRow})")
+            })
         }))
-        this.bottom = buttonInputArea
+        this.bottom = gridButtonInputArea
 
         textOutputArea = TextArea("Hello, FX!")
 //        textOutputArea.font = Font.font("monospace")
