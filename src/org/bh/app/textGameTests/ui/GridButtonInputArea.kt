@@ -3,7 +3,7 @@
 package org.bh.app.textGameTests.ui
 
 import LatteFX.*
-import javafx.event.EventHandler
+import javafx.event.*
 import javafx.scene.control.*
 import javafx.scene.layout.*
 import org.bh.tools.base.abstraction.*
@@ -16,6 +16,7 @@ import org.bh.tools.textGame.interaction.*
 import org.bh.tools.textGame.interaction.InteractionFilter.*
 import org.bh.tools.ui.events.*
 import org.bh.tools.ui.visualization.*
+import kotlin.DeprecationLevel.*
 
 /**
  * A grid of buttons, to be used as a generalized user input
@@ -30,11 +31,11 @@ class GridButtonInputArea
     val models: List<List<GridButtonInputModel>> by lazy {
         val actionTable = MutableList<List<GridButtonInputModel>>()
 
-        (0.int8Value..model.rowCount).forEach { rowIndex32 ->
+        (0.int8Value until model.rowCount).forEach { rowIndex32 ->
             val row = MutableList<GridButtonInputModel>()
             val rowIndex = rowIndex32.int8Value
 
-            (0.int8Value..model.columnCount).forEach { columnIndex ->
+            (0.int8Value until model.columnCount).forEach { columnIndex ->
                 row.add(model.buttonModelGenerator(columnIndex.int8Value, rowIndex))
             }
 
@@ -121,30 +122,30 @@ class GridButtonInputAreaModel (
 
 
 
-open class ButtonInputModel<Trigger> (
+open class ButtonInputModel<Trigger, Action> (
         var titleText: String,
         var presentation: UIPresentation,
         private var interactionFilter: InteractionFilter,
         val trigger: Trigger,
-        val didPress: (ButtonInputUserAction) -> Unit
+        open val didPress: (Action) -> Unit
 )
     where
-        Trigger : InteractionTrigger
+        Trigger : InteractionTrigger,
+        Action: ButtonInputUserAction
 {
-    fun matches(filter: InteractionFilter) = when (this.interactionFilter) {
+    open fun matches(filter: InteractionFilter) = when (this.interactionFilter) {
         all -> true
         currentlyAvailable -> filter == visibleToCharacter || filter == currentlyAvailable
         visibleToCharacter -> filter == visibleToCharacter
     }
 
-    fun asButton(): Button {
+    open fun asButton(eventTranslator: (ActionEvent) -> Action): Button {
         val b = Button(this.titleText)
 
         b.onAction = EventHandler {
-            this.didPress(object : ButtonInputUserAction {
-                override val trigger = InteractionTrigger.any(null)
-            })
+            this.didPress(eventTranslator(it))
         }
+
         return b
     }
 }
@@ -160,10 +161,22 @@ open class GridButtonInputModel(
         presentation: UIPresentation = UIPresentation.default,
         interactionFilter: InteractionFilter,
         override val didPress: (GridButtonInputUserAction) -> Unit
-): ButtonInputModel<GridButtonInputTrigger>
-    (titleText, presentation, interactionFilter, GridButtonInputTrigger(Int8Point(column, row)), didPress = {
-        didPress(GridButtonInputUserAction(column, row, it))
-    })
+): ButtonInputModel<GridButtonInputTrigger, GridButtonInputUserAction>
+    (titleText, presentation, interactionFilter, GridButtonInputTrigger(Int8Point(column, row)), didPress = didPress)
 {
+    @Deprecated("This subclass comes with its own event translator", ReplaceWith("asButton()"), HIDDEN)
+    override fun asButton(eventTranslator: (ActionEvent) -> GridButtonInputUserAction): Button {
+        return super.asButton(eventTranslator)
+    }
 
+
+    fun asButton(): Button {
+        return super.asButton { _ ->
+            object : GridButtonInputUserAction {
+                override val clickedColumn get() = column
+                override val clickedRow get() = row
+                override val trigger get() = GridButtonInputTrigger(Int8Point(x = column, y = row))
+            }
+        }
+    }
 }
