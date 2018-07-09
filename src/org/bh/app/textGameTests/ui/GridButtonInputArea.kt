@@ -2,13 +2,11 @@
 
 package org.bh.app.textGameTests.ui
 
-import LatteFX.*
 import javafx.event.*
 import javafx.scene.control.*
 import javafx.scene.layout.*
 import org.bh.tools.base.abstraction.*
 import org.bh.tools.base.collections.extensions.*
-import org.bh.tools.base.func.*
 import org.bh.tools.base.math.*
 import org.bh.tools.base.math.geometry.*
 import org.bh.tools.textGame.basics.*
@@ -84,7 +82,7 @@ class GridButtonInputArea
 //                didPress: InteractionType)
 //            : Result
 //            where InteractableType : Interactable<InteractionType>,
-//                  InteractionType : Interaction,
+//                  InteractionType : InteractionEvent,
 //                  Result : InteractionResult<InteractionType>
 //    {
 //        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
@@ -99,7 +97,7 @@ class GridButtonInputArea
 
 
 
-interface ButtonInputUserAction: Interaction, UIEvent
+interface ButtonInputUserAction: InteractionEvent, UIEvent
 
 
 
@@ -134,9 +132,9 @@ open class ButtonInputModel<Trigger, Action> (
         Action: ButtonInputUserAction
 {
     open fun matches(filter: InteractionFilter) = when (this.interactionFilter) {
-        all -> true
-        currentlyAvailable -> filter == visibleToCharacter || filter == currentlyAvailable
-        visibleToCharacter -> filter == visibleToCharacter
+        is all -> true
+        is currentlyAvailable -> filter is visibleToCharacter || filter is currentlyAvailable
+        is visibleToCharacter -> filter is visibleToCharacter
     }
 
     open fun asButton(eventTranslator: (ActionEvent) -> Action): Button {

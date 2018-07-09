@@ -28,7 +28,7 @@ class TGTMainView : BorderPane() {
             GridButtonInputModel(column = columnIndex,
                                  row = rowIndex,
                                  titleText = "Hey there",
-                                 interactionFilter = visibleToCharacter,
+                                 interactionFilter = visibleToCharacter(null),
                                  didPress = {
                 println("pressed (${it.clickedColumn}, ${it.clickedRow})")
             })
