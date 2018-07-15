@@ -4,7 +4,6 @@ import LatteFX.*
 import javafx.scene.control.TextArea
 import javafx.scene.layout.BorderPane
 import org.bh.app.textGameTests.ui.*
-import org.bh.tools.textGame.interaction.InteractionFilter.*
 
 class TGTContentWrapper : LatteWindowContentView(TGTMainView()) {
 }
@@ -22,17 +21,7 @@ class TGTMainView : BorderPane() {
 //        textInputField.maxHeight = textInputField.font.size * 3
 //        this.bottom = textInputField
 
-        gridButtonInputArea = GridButtonInputArea(GridButtonInputAreaModel(columnCount = 5,
-                                                                           rowCount = 3,
-                                                                           buttonModelGenerator = { columnIndex, rowIndex ->
-            GridButtonInputModel(column = columnIndex,
-                                 row = rowIndex,
-                                 titleText = "Hey there",
-                                 interactionFilter = visibleToCharacter(null),
-                                 didPress = {
-                println("pressed (${it.clickedColumn}, ${it.clickedRow})")
-            })
-        }))
+        gridButtonInputArea = GridButtonInputArea(PRGridButtonAreaModel())
         this.bottom = gridButtonInputArea
 
         textOutputArea = TextArea("Hello, FX!")
