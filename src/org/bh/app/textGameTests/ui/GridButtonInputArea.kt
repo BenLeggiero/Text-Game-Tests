@@ -5,10 +5,12 @@ package org.bh.app.textGameTests.ui
 import javafx.event.*
 import javafx.scene.control.*
 import javafx.scene.layout.*
+import org.bh.app.textGameTests.ui.RectangleScanningApproach.Companion.default
 import org.bh.tools.base.abstraction.*
 import org.bh.tools.base.collections.extensions.*
 import org.bh.tools.base.math.*
 import org.bh.tools.base.math.geometry.*
+import org.bh.tools.base.math.geometry.RectangleScanningApproach.Companion.default
 import org.bh.tools.textGame.basics.*
 import org.bh.tools.textGame.interaction.*
 import org.bh.tools.textGame.interaction.InteractionFilter.*
@@ -30,12 +32,14 @@ class GridButtonInputArea
     val models: List<List<GridButtonInputModel>> by lazy {
         val actionTable = MutableList<List<GridButtonInputModel>>()
 
-        (0.int8Value until model.rowCount).forEach { rowIndex32 ->
+        model.size.forEach { point32 ->
             val row = MutableList<GridButtonInputModel>()
             val rowIndex = rowIndex32.int8Value
 
-            (0.int8Value until model.columnCount).forEach { columnIndex ->
-                row.add(model.buttonModelGenerator(coordinates))
+
+
+            model.size.forEach { point ->
+                row.add(model.buttonModelGenerator(point))
             }
 
             actionTable.add(row)
@@ -95,7 +99,6 @@ class GridButtonInputArea
         fun userDidPressButton(coordinate: Point<Int8>): InteractionResult<GridButtonInputUserAction>
     }
 }
-
 
 
 interface ButtonInputUserAction: InteractionEvent, UIEvent
