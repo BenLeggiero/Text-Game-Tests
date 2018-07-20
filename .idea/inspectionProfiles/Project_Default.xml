@@ -4,6 +4,9 @@
     <inspection_tool class="ClassName" enabled="true" level="WEAK WARNING" enabled_by_default="true">
       <option name="namePattern" value="[a-zA-Z][A-Za-z\d]*" />
     </inspection_tool>
+    <inspection_tool class="EnumEntryName" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="namePattern" value="[a-zA-Z]([A-Za-z\d]*" />
+    </inspection_tool>
     <inspection_tool class="JavaCollectionsStaticMethodOnImmutableList" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="PackageDirectoryMismatch" enabled="true" level="INFORMATION" enabled_by_default="true" />
     <inspection_tool class="PackageName" enabled="true" level="WEAK WARNING" enabled_by_default="true">

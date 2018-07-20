@@ -17,35 +17,34 @@ import org.bh.tools.ui.visualization.*
 @Suppress("FunctionName")
 fun PRGridButtonAreaModel(): GridButtonInputAreaModel {
     val manager = PRGridButtonManager()
-    return GridButtonInputAreaModel(5, 3) { x, y -> genButton(x, y, manager) }
+    return GridButtonInputAreaModel(5, 3) { genButton(it, manager) }
 }
 
 
 
-private fun genButton(x: Int8, y: Int8, manager: PRGridButtonManager): PRGridButtonInputModel {
-    return PRGridButtonInputModel(column = x,
-                                  row = y,
-                                  role = genRole(x, y),
-                                  didPress = { manager.didPress(x, y, it) },
+private fun genButton(coordinates: Point<Int8>, manager: PRGridButtonManager): PRGridButtonInputModel {
+    return PRGridButtonInputModel(coordinates = coordinates,
+                                  role = genRole(coordinates),
+                                  didPress = { manager.didPress(coordinates, it) },
                                   interactionFilter = InteractionFilter.currentlyAvailable,
                                   presentation = UIPresentation.default)
 }
 
 
-private fun genRole(column: Int8, row: Int8) = when (row.toInt()) {
-    0 -> when (column.toInt()) {
+private fun genRole(coordinates: Point<Int8>) = when (coordinates.row.toInt()) {
+    0 -> when (coordinates.column.toInt()) {
         0 -> noInteraction
         1 -> cardinalNavigation(north)
         2 -> noInteraction
         else -> noInteraction
     }
-    1 -> when (column.toInt()) {
+    1 -> when (coordinates.column.toInt()) {
         0 -> cardinalNavigation(west)
         1 -> noInteraction
         2 -> cardinalNavigation(east)
         else -> noInteraction
     }
-    2 -> when (column.toInt()) {
+    2 -> when (coordinates.column.toInt()) {
         0 -> noInteraction
         1 -> cardinalNavigation(south)
         2 -> noInteraction
@@ -56,8 +55,8 @@ private fun genRole(column: Int8, row: Int8) = when (row.toInt()) {
 
 
 class PRGridButtonManager {
-    fun didPress(x: Int8, y: Int8, action: GridButtonInputUserAction) {
-        println("{ x: $x, y: $y, action: $action}")
+    fun didPress(coordinates: Point<Int8>, action: GridButtonInputUserAction) {
+        println("{ coordinates: $coordinates, action: $action}")
     }
 }
 

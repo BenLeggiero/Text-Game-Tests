@@ -5,19 +5,21 @@ package org.bh.app.textGameTests.ui
 import javafx.event.*
 import javafx.scene.control.*
 import javafx.scene.layout.*
-import org.bh.app.textGameTests.ui.RectangleScanningApproach.Companion.default
 import org.bh.tools.base.abstraction.*
 import org.bh.tools.base.collections.extensions.*
 import org.bh.tools.base.math.*
 import org.bh.tools.base.math.geometry.*
-import org.bh.tools.base.math.geometry.RectangleScanningApproach.Companion.default
 import org.bh.tools.textGame.basics.*
 import org.bh.tools.textGame.interaction.*
 import org.bh.tools.textGame.interaction.InteractionFilter.*
-import org.bh.tools.textGame.interaction.InteractionTrigger.*
 import org.bh.tools.ui.events.*
 import org.bh.tools.ui.visualization.*
 import kotlin.DeprecationLevel.*
+import javafx.scene.layout.GridPane.setFillWidth
+import javafx.scene.layout.Priority
+import javafx.scene.layout.ColumnConstraints
+
+
 
 /**
  * A grid of buttons, to be used as a generalized user input
@@ -25,24 +27,21 @@ import kotlin.DeprecationLevel.*
  * @author Ben Leggiero
  * @since 2018-03-22
  */
-class GridButtonInputArea
-    (val model: GridButtonInputAreaModel)
-    : GridPane(), TextGameUiElement<GridButtonInputUserAction> {
+class GridButtonInputArea(
+        val model: GridButtonInputAreaModel
+) : GridPane(), TextGameUiElement<GridButtonInputUserAction> {
 
     val models: List<List<GridButtonInputModel>> by lazy {
-        val actionTable = MutableList<List<GridButtonInputModel>>()
+        val actionTable = MutableList<MutableList<GridButtonInputModel>>()
 
-        model.size.forEach { point32 ->
-            val row = MutableList<GridButtonInputModel>()
-            val rowIndex = rowIndex32.int8Value
+        model.size.forEach { point, _ ->
 
-
-
-            model.size.forEach { point ->
-                row.add(model.buttonModelGenerator(point))
-            }
-
-            actionTable.add(row)
+            actionTable.getOrSet(at = point.row.int32Value,
+                                 newElement = { MutableList() },
+                                 paddingGenerator = { MutableList() }
+            ).getOrSet(at = point.column.int32Value,
+                       newElement = { model.buttonModelGenerator(point) },
+                       paddingGenerator = { model.buttonModelGenerator(point) })
         }
 
         /*return*/ actionTable
@@ -55,8 +54,20 @@ class GridButtonInputArea
     init {
         models.forEachIndexed { rowIndex, row ->
             row.forEachIndexed { columnIndex, cell ->
-                super.add(cell.asButton(), columnIndex, rowIndex)
+                val button = cell.asButton()
+                setFillWidth(button, true)
+                setFillHeight(button, true)
+                button.setMaxSize(Double.infinity, Double.infinity)
+                super.add(button, columnIndex, rowIndex)
             }
+        }
+
+        (0 until this.columnCount).forEach {
+            val cc = ColumnConstraints()
+            cc.hgrow = Priority.ALWAYS // allow column to grow
+            cc.isFillWidth = true // ask nodes to fill space for column
+            // other settings as needed...
+            columnConstraints.add(cc)
         }
     }
 
@@ -118,7 +129,10 @@ typealias GridButtonInputTrigger = InteractionTrigger.coordinates<Int8>
 open class GridButtonInputAreaModel (
         val size: Int8Size,
         val buttonModelGenerator: (coordinate: Point<Int8>) -> GridButtonInputModel
-)
+) {
+    constructor(width: Int8, height: Int8, buttonModelGenerator: (coordinate: Point<Int8>) -> GridButtonInputModel)
+            : this(Int8Size(width, height), buttonModelGenerator)
+}
 
 
 
